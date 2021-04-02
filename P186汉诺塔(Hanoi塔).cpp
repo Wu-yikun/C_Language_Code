@@ -4,14 +4,14 @@ void Hanoi(char A,char B,char C,int n)
 {
 	if(n==1)
 	{
-		printf("%d盘子:move %c to %c\n",n,A,B);
+		printf("%d盘子:move %c to %c\n",n,A,C);
 		count++;
 	}
 	else
 	{
 		Hanoi(A,C,B,n-1);
-		printf("%d盘子:move %c to %c\n",n,A,B);
-		Hanoi(B,C,A,n-1);
+		printf("%d盘子:move %c to %c\n",n,A,C);
+		Hanoi(B,A,C,n-1);
 		count++;
 	}
 }
